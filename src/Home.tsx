@@ -1,3 +1,4 @@
+import { Box } from "@mui/material"
 import { useState, useEffect } from "react"
 import Bubble, { BubbleType } from "./Bubble"
 
@@ -14,11 +15,17 @@ const Home = () => {
   }, [])
 
   return (
-    <>
+    <Box
+      display="flex"
+      justifyContent="space-around"
+      sx={{ maxWidth: "80%vh" }}
+      justifySelf="center"
+      flexWrap="wrap"
+    >
       {bubbles.map((bubble) => (
         <Bubble id={bubble.id} totalAmount={bubble.totalAmount} />
       ))}
-    </>
+    </Box>
   )
 }
 

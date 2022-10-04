@@ -7,14 +7,10 @@ export interface BubbleType {
 
 const Bubble = ({ id, totalAmount }: BubbleType) => {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card sx={{ minWidth: "10%", borderRadius: "50%" }} variant="outlined">
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          {id}
-        </Typography>
-        <Typography variant="h5" component="div">
-          {totalAmount}
-        </Typography>
+        <Typography gutterBottom>{id}</Typography>
+        <Typography sx={{ fs: 14 }}>{totalAmount}</Typography>
       </CardContent>
     </Card>
   )
